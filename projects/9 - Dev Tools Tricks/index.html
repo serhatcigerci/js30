@@ -18,29 +18,40 @@
     }
 
     // Regular
-
+    console.log('hello')
     // Interpolated
-
+    console.log('Hello I am a %s string', 'eyyo')
     // Styled
-
+    console.log('%c I am some great text', 'font-size: 50px; background: red; text-shadow: 10px 10px 0 blue');
     // warning!
-
+    console.warn('OH NOOO')
     // Error :|
-
+    console.error('Shit!')
     // Info
-
+    console.info('This is an info')
     // Testing
-
+    const p = document.querySelector('p');
+    
+    console.assert(p.classList.contains('ouch'), 'That is wrong!')
     // clearing
-
+    console.clear()
     // Viewing DOM Elements
+    console.dir(p)
+    console.clear()
 
     // Grouping together
+    dogs.forEach(dog => {
+        console.group(`${dog.name}`)
+        console.log(`This is ${dog.name}`)
+        console.log(`${dog.name} is ${dog.age} years old`)
+        console.log(`${dog.name} is ${dog.age * 7} years old`)
 
+    })
     // counting
-
+    console.count('sero')
+    console.clear()
     // timing
-
+    console.time('fetching data')
   </script>
 </body>
 </html>
