@@ -34,12 +34,12 @@ function takePhoto() {
   snap.currentTime = 0
   snap.play()
 
-  const data = canvas.toDataUrl('image/jpeg')
+  const data = canvas.toDataURL('image/jpeg');
   const link = document.createElement('a')
   link.href = data
-  link.setAttribute('download', 'handsome')
+  link.setAttribute('download', 'the-photo')
   link.textContent = 'Download Image'
-  strip.insertBefore(llink, strip.firstChild)
+  strip.insertBefore(link, strip.firstChild)
 }
 
 getVideo()
