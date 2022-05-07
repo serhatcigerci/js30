@@ -1,9 +1,22 @@
+let countdown
+
 function timer(seconds) {
   const now = Date.now()
   const then = now + seconds * 1000
+  displayTimeLeft(seconds)
   
-  setInterval(() => {
+  countdown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000)
     console.log(secondsLeft)
+    if(secondsLeft < 0) {
+      clearInterval(countdown)
+      return
+    }
+    displayTimeLeft(secondsLeft)
   }, 1000)
+}
+
+
+function displayTimeLeft(seconds) {
+  
 }
