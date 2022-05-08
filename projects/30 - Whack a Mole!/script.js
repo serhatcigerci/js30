@@ -27,3 +27,9 @@ function peep() {
     if (!timeUp) peep()
   }, time)
 }
+
+function startGame() {
+  scoreBoard.textContent = 0
+  timeUp = false
+  peep()
+}
